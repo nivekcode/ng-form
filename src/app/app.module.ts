@@ -9,6 +9,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ReactiveFormComponent} from './reactive-form.component';
 import {MultiplyCounterComponent} from './multiply-counter.component';
 import {ReactiveMultiplyCounterFormComponent} from './reactive-multiply-counter-form.component';
+import {PlayersModule} from './players/players.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {ReactiveMultiplyCounterFormComponent} from './reactive-multiply-counter-
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PlayersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
