@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 0;
+  padding-left: 0;
+}

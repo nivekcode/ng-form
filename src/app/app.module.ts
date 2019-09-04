@@ -10,6 +10,7 @@ import {ReactiveFormComponent} from './reactive-form.component';
 import {MultiplyCounterComponent} from './multiply-counter.component';
 import {ReactiveMultiplyCounterFormComponent} from './reactive-multiply-counter-form.component';
 import {PlayersModule} from './players/players.module';
+import {LotrRaterModule} from './lotr-rater/lotr-rater.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {PlayersModule} from './players/players.module';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    PlayersModule
+    PlayersModule,
+    LotrRaterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

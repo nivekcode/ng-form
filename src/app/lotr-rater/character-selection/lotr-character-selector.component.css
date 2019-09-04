@@ -1,0 +1,15 @@
+button {
+  width: 100%;
+  font-size: 50px;
+}
+
+img {
+  max-width: 1000px;
+  max-height: 600px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
