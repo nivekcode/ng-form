@@ -11,6 +11,7 @@ import {MultiplyCounterComponent} from './multiply-counter.component';
 import {ReactiveMultiplyCounterFormComponent} from './reactive-multiply-counter-form.component';
 import {PlayersModule} from './players/players.module';
 import {LotrRaterModule} from './lotr-rater/lotr-rater.module';
+import {LotrAppComponent} from './lotr-app/lotr-app.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {LotrRaterModule} from './lotr-rater/lotr-rater.module';
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
     MultiplyCounterComponent,
-    ReactiveMultiplyCounterFormComponent
+    ReactiveMultiplyCounterFormComponent,
+    LotrAppComponent
   ],
   imports: [
     BrowserModule,
