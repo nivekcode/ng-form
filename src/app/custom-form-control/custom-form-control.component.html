@@ -1,3 +1,4 @@
+<h1>------------- Reactive form --------------------</h1>
 <form [formGroup]="cfcReactiveFormGroup">
   <label for="playerInputReactive">Enter your player</label>
   <input formControlName="playerInput" id="playerInputReactive" type="text"/>
@@ -11,3 +12,19 @@
   {{ cfcReactiveFormGroup.get('playerInput').status | json }}
   {{ cfcReactiveFormGroup.get('playerInput').errors | json }}
 </pre>
+
+<h1>------------- Template driven form --------------------</h1>
+<form #cfcTemplateForm="ngForm">
+  <label for="playerInputTemplate">Enter your player</label>
+  <input [(ngModel)]="bestPlayer" name="templatePlayers"  #templatePlayers="ngModel" id="playerInputTemplate" type="text"/>
+  <p *ngIf="cfcReactiveFormGroup.get('playerInput')?.errors?.isOneOfTheBestPlayers" style="color: red">
+    {{ cfcReactiveFormGroup.get('playerInput').errors.isOneOfTheBestPlayers | json }}
+  </p>
+</form>
+
+<pre>
+  {{ cfcTemplateForm.status | json }}
+  {{ templatePlayers.status | json }}
+  {{ templatePlayers.errors | json }}
+</pre>
+

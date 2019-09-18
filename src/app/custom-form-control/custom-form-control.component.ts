@@ -10,6 +10,7 @@ import {validatePlayer} from './best-players-validator/best-players-validators';
 export class CustomFormControlComponent implements OnInit {
 
   cfcReactiveFormGroup: FormGroup;
+  bestPlayer;
 
   constructor(private fb: FormBuilder) {
   }
