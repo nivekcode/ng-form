@@ -1,9 +1,13 @@
 <form [formGroup]="cfcReactiveFormGroup">
   <label for="playerInputReactive">Enter your player</label>
   <input formControlName="playerInput" id="playerInputReactive" type="text"/>
+  <p *ngIf="cfcReactiveFormGroup.get('playerInput')?.errors?.isOneOfTheBestPlayers" style="color: red">
+    {{ cfcReactiveFormGroup.get('playerInput').errors.isOneOfTheBestPlayers | json }}
+  </p>
 </form>
 
 <pre>
   {{ cfcReactiveFormGroup.status | json }}
   {{ cfcReactiveFormGroup.get('playerInput').status | json }}
+  {{ cfcReactiveFormGroup.get('playerInput').errors | json }}
 </pre>

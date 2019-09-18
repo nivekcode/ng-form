@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {validatePlayer} from './best-players-validator/best-players-validators';
 
 @Component({
   selector: 'app-custom-form-control',
@@ -15,7 +16,7 @@ export class CustomFormControlComponent implements OnInit {
 
   ngOnInit() {
     this.cfcReactiveFormGroup = this.fb.group({
-      playerInput: new FormControl()
+      playerInput: new FormControl('', validatePlayer)
     });
   }
 
