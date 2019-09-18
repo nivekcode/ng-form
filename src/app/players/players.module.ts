@@ -9,7 +9,7 @@ import {PlayersPreviewComponent} from './players-preview.component';
 @NgModule({
   imports: [CommonModule, ReactiveFormsModule],
   declarations: [PlayersDemoComponent, PlayersSelectorComponent, PlayersPreviewComponent],
-  exports: [PlayersDemoComponent],
+  exports: [PlayersDemoComponent, PlayersSelectorComponent],
   providers: [PlayersService]
 })
 export class PlayersModule {

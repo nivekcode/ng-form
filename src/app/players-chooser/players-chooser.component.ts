@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-players-chooser',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayersChooserComponent implements OnInit {
 
-  constructor() { }
+  playersFormGroup: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.playersFormGroup = this.fb.group({
+      players: new FormControl('Linoel Messi')
+    });
   }
 
 }

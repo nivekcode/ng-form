@@ -1,0 +1,9 @@
+<form [formGroup]="playersFormGroup">
+  <app-players-selector formControlName="players"></app-players-selector>
+</form>
+
+<pre>
+  {{playersFormGroup.value | json}}
+  {{playersFormGroup.valid | json}}
+  {{playersFormGroup.get('players').value | json}}
+</pre>

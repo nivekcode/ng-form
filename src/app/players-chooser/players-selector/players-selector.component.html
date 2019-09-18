@@ -1,7 +1,7 @@
 <div class="dropdown">
   <button (click)="show = true" class="dropbtn">Dropdown</button>
   <div id="myDropdown" [ngClass]="{'dropdown-content': true, 'show': show}">
-    <a *ngFor="let player of players" (click)="selectedPlayer = player; show = false">{{player}}</a>
+    <a *ngFor="let player of players" (click)="selectPlayer(player)">{{player}}</a>
   </div>
 </div>
 
