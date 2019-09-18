@@ -16,7 +16,7 @@
 <h1>------------- Template driven form --------------------</h1>
 <form #cfcTemplateForm="ngForm">
   <label for="playerInputTemplate">Enter your player</label>
-  <input [(ngModel)]="bestPlayer" name="templatePlayers"  #templatePlayers="ngModel" id="playerInputTemplate" type="text"/>
+  <input [(ngModel)]="bestPlayer" name="templatePlayers"  #templatePlayers="ngModel" id="playerInputTemplate" type="text" validatePlayer/>
   <p *ngIf="cfcReactiveFormGroup.get('playerInput')?.errors?.isOneOfTheBestPlayers" style="color: red">
     {{ cfcReactiveFormGroup.get('playerInput').errors.isOneOfTheBestPlayers | json }}
   </p>

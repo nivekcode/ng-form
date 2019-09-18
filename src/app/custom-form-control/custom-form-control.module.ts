@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CustomFormControlComponent } from './custom-form-control.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {CustomFormControlComponent} from './custom-form-control.component';
 import {RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {PlayerValidator} from './best-players-validator/best-players-validators';
 
 @NgModule({
-  declarations: [CustomFormControlComponent],
+  declarations: [CustomFormControlComponent, PlayerValidator],
   imports: [
     CommonModule,
     RouterModule.forChild([
@@ -15,4 +16,5 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule
   ]
 })
-export class CustomFormControlModule { }
+export class CustomFormControlModule {
+}
