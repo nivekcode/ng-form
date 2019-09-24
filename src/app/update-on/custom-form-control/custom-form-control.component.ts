@@ -46,7 +46,6 @@ export class CustomFormControlComponent implements OnInit, ControlValueAccessor 
   }
 
   blured() {
-    this.propagateChange(this.value);
     this.propagateTouch(this.value);
   }
 
