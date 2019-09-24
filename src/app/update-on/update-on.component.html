@@ -1,0 +1,7 @@
+<form [formGroup]="updateOnForm">
+  <input type="text" formControlName="simpleInput"/>
+</form>
+
+<pre>
+  {{ updateOnForm.value | json }}
+</pre>

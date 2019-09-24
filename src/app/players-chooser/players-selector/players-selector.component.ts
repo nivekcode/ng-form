@@ -1,5 +1,6 @@
 import {Component, forwardRef, OnInit} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {validatePlayer} from '../../custom-form-control/best-players-validator/best-players-validators';
 
 @Component({
   selector: 'app-players-selector',
@@ -9,6 +10,11 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => PlayersSelectorComponent),
+      multi: true
+    },
+    {
+      provide: NG_VALIDATORS,
+      useExisting: PlayersSelectorComponent,
       multi: true
     }
   ]
@@ -26,6 +32,10 @@ export class PlayersSelectorComponent implements ControlValueAccessor, OnInit {
   }
 
   ngOnInit() {
+  }
+
+  validate(control: FormControl) {
+    return validatePlayer(control);
   }
 
   registerOnChange(fn: any): void {

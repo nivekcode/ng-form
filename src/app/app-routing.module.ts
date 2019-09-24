@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'players-chooser',
     loadChildren: () => import('./players-chooser/players-chooser.module').then(m => m.PlayersChooserModule)
+  },
+  {
+    path: 'update-on',
+    loadChildren: () => import('./update-on/update-on.module').then(m => m.UpdateOnModule)
   }
 ];
 
