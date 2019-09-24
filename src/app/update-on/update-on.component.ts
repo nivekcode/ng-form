@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
@@ -10,11 +10,13 @@ export class UpdateOnComponent implements OnInit {
 
   updateOnForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) {
+  }
 
   ngOnInit() {
     this.updateOnForm = this.fb.group({
-      simpleInput: new FormControl('', {updateOn: 'blur'})
+      simpleInput: new FormControl('', {updateOn: 'blur'}),
+      customInput: new FormControl('initial', {updateOn: 'blur'})
     });
   }
 
