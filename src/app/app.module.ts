@@ -12,6 +12,8 @@ import {ReactiveMultiplyCounterFormComponent} from './reactive-multiply-counter-
 import {PlayersModule} from './players/players.module';
 import {LotrRaterModule} from './lotr-rater/lotr-rater.module';
 import {LotrAppComponent} from './lotr-app/lotr-app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule, MatFormFieldModule, MatGridListModule, MatInputModule, MatToolbarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,13 @@ import {LotrAppComponent} from './lotr-app/lotr-app.component';
     ReactiveFormsModule,
     AppRoutingModule,
     PlayersModule,
-    LotrRaterModule
+    LotrRaterModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

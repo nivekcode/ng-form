@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'update-on',
     loadChildren: () => import('./update-on/update-on.module').then(m => m.UpdateOnModule)
-  }
+  },
 ];
 
 @NgModule({
